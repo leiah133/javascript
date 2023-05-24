@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+ *{
+    margin: 0;
+    padding: 0;
+    font-family: 'Hanken Grotesk', sans-serif;
+    box-sizing: border-box;
+}
+p {
+    @apply text-slate-200
+}
+.bg-div{
+   background: linear-gradient(180deg,hsl(252, 100%, 67%), hsl(241, 81%, 54%) ) ;
+}
+.bg-circle{
+    background: linear-gradient(180deg, hsla(256, 72%, 46%, 1), hsla(241, 72%, 46%, 0));
+}

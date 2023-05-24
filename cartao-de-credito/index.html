@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário de Cartão de Crédito</title>
+</head>
+<body>
+    <form action="">
+        <section id="credit-card">
+            <div class="front"></div>
+            <div class="back"></div>
+        </section>
+        <Section class="inputs flex">
+           <div class="input-wrapper">
+            <label for="cc-number">Número do cartão</label>
+            <input type="text"
+             id="cc-number"
+             placeholder=" ****   ****   ****   **** "
+             >
+           </div> 
+           <div class="input-wrapper">
+            <label for="cc-holder">Nome do Titular</label>
+            <input type="text" 
+            id="cc-holder" 
+            placeholder="Nome como está no cartão"
+            required
+            >
+            <div class="warning">
+              <img src="./images/Warning.svg" alt="alerta"> Nome do titular é obrigatório
+            </div>
+           </div>
+           <div class="col-2 flex">
+            <div class="input-wrapper">
+                <label for="cc-validaty">Validade</label>
+                <input type="text"
+                id="cc-validaty"
+                placeholder="mm / aa"
+                >
+            </div>
+            <div class="input-wrapper">
+                <label for="cc-cvv" class="flex help">CVV
+                    <img src="./images/Question.svg" alt="ajuda" title="Esse numero está nas costas do seu cartão">
+                </label>
+                <input type="text" 
+                id="cc-cvv"
+                placeholder="***">
+            </div>
+           </div>
+        </Section>
+        <section class="info-security flex ">
+           <img src="./images/Vector.svg" alt="icone de segurança"> Seus dados estão seguros
+        </section>
+        <button>Adcionar Cartão</button>
+    </form>
+
+    <script src="https://unpkg.com/imask"></script>
+    <script src="script.js"></script>
+</body>
+</html>

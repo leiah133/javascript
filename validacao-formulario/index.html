@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Validação de formulário</title>
+</head>
+<body>
+  <div class="contato">
+    <h1>Fale Conosco </h1>
+    <p>Deixe sua mensagem aqui</p>
+  </div>
+  <form action="">
+    <div class="name">
+        <label for="">Nome completo:</label>
+        <input type="text" name="name" id="" class="" placeholder="Digite seu nome...">
+        <p class="error error-hidden">nome obrigatório</p>
+    </div>
+    <div class="email">
+        <label for="">Email:</label>
+        <input type="text" name="email" id="" class="" placeholder="Digite seu email...">
+        <p class="error error-hidden">Email obrigatório</p>
+    </div>
+    <div class="cpf">
+        <label for="">CPF:</label>
+        <input type="tect" name="cpf" id="" maxlength="14" placeholder="Digite seu cpf...">
+        <p class="error error-hidden">CPF obrigatório</p>
+    </div>
+    <hr/>
+    <button type="submit" class="btn">Enviar</button>
+  </form>
+  <div class="thanks error-hidden">
+    <h2>Obrigado pelo seu carinho</h2>
+  </div>
+    
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>

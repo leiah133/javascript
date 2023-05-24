@@ -1,0 +1,65 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+}
+.contato{
+    background-image: linear-gradient( to right, #2be1f9, #9a59b1);
+    color:#fff;
+    padding:60px;
+    font-size:20px;
+}
+form{
+    padding:60px;
+}
+.name label, .email label, .cpf label{
+    display:block;
+    font-size:24px;
+    margin-bottom:0.24rem;
+}
+.email, .cpf{
+    padding:10px 0;
+}
+.name input, .email input, .cpf input{
+    width:350px;
+    padding:10px;
+    font-size:16px;
+    color:#333;
+    margin-bottom:10px;
+}
+.invalid{
+  border:1px solid red;  
+}
+.error{
+    font-size:16px;
+    color:red;
+}
+hr{
+    border:none;
+    height:1px;
+    background-image: linear-gradient( to right, #2be1f9, #9a59b1);
+    margin: 30px 0
+}
+.btn{
+    padding:10px 20px;
+    border:none;
+    background-image: linear-gradient( to right, #2be1f9, #9a59b1);
+    color:#fff;
+    font-weight:bold;
+    border-radius:10px;
+
+}
+.btn:hover{
+    background:#2be1f9;
+    color:#000;
+    cursor:pointer;
+    transition:all .90s;
+
+}
+.error-hidden{
+    display:none;
+}
+.thanks{
+    padding: 40px;
+    text-align:center;
+}

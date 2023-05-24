@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap');
+:root{
+  --Red: hsl(0, 100%, 66%);
+  --White: hsl(0, 0%, 100%);
+  --Light-grayish-violet: hsl(270, 3%, 87%);
+  --Dark-grayish-violet: hsl(279, 6%, 55%);
+  --Very-dark-violet: hsl(278, 68%, 11%);
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body{
+  min-height: 100vh;
+  font-family: 'Space Grotesk', sans-serif;
+}
+/* thanks you a mensagem que aparece */
+.hidden{
+  display: none !important;
+}
+.container{
+  display: flex;
+  align-items: center;
+}
+/* lado esquerdo */
+.esquerda{
+  min-height: 100vh;
+  width: 40%;
+  background-image: url(./images/bg-main-desktop.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+/* posicionando os cartoes em cima do background */
+.cartao{
+  position: absolute;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  left: 100%;
+  transform: translate(-50%, -50%);
+}
+.cartao-frente{
+  position: relative;
+  transform: translateX(-100px);
+}
+.logo{
+  position: absolute;
+  top:1rem;
+  left: 1rem;
+}
+/* as informações em cima do cartão  */
+#number{
+  position: absolute;
+  color: var(--White);
+  bottom: 5rem;
+  left: 1rem;
+  letter-spacing: 2px;
+}
+.informacoes{
+  position: absolute;
+  bottom: 2rem;
+  left: 1rem;
+  right: 3rem;
+  display: flex;
+  color: var(--White);
+  justify-content: space-between;
+}
+.verso-cartao{
+  position: relative;
+}
+/* Mensagem de erro java script */
+.error{
+  border: 12px solid --Red;
+}
+.error_mensage{
+  gap: 0;
+}
+.error_mensag::after{
+  content: "cant't be blank";
+  color: var(--Red);
+  margin-top: .2rem;
+}
+/* codigo de seegurança do cartão */
+#cvc{
+  position: absolute;
+  right: 3.5rem;
+  top: 6.5rem;
+  color: var(--Light-grayish-violet);
+}
+/* lado direito */
+.direita{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+/* organizando o formulario */
+.direita form{
+  display: grid;
+  gap: 1rem;
+  width: 350px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+label{
+  color: var(--Very-dark-violet);
+  margin-bottom: .3rem;
+  text-transform: uppercase;
+}
+input{
+  padding: .5rem;
+  font-size: 18px;
+  border: 1px solid var(--Dark-grayish-violet);
+  border-radius:6px ;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button{appearance: none;
+margin: 0px;
+}
+input::placeholder{
+  font-family: inherit;
+  color: var(--Dark-grayish-violet);
+}
+input:focus{
+  outline-color: hsl(249, 99%, 64%);
+}
+.grid1{
+  
+  display: flex;
+  flex-direction: column;
+  /* largura do formulario */
+  grid-column: 2 span; 
+  
+}
+ .grid2{
+  display: flex;
+  flex-direction: column;
+  /* largura do formulario */
+  grid-column: 2 span; 
+  
+  
+ 
+}
+.grid3{
+  display: flex;
+  flex-direction: column;}
+   
+
+.grid4{
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 span;
+}
+.informacao-cartao{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ grid-column:  2 span;
+}
+#cartao-data{
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 span;
+  
+}
+.divs{
+  width: 50px;
+}
+.divs1{
+  width: 50px;
+}
+
+#cartao-data .dois_inputs{
+display:flex;
+}
+.dois_inputs {
+display: flex;
+}
+
+#cartao-data div input{
+width: 70px;
+margin-inline: .5rem;
+margin-left: 0;
+}
+#cvc-sec{
+  width: 100%;
+  
+}
+
+form button{
+  grid-column: 2 span;
+  font-size: 18px;
+  height: 50px;
+  color: var(--White);
+  border-radius: 6px;
+  background: var(--Very-dark-violet);
+  cursor: pointer;
+}
+.thank{
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.thank h1{
+  text-transform: uppercase;
+  letter-spacing: 3px;
+
+}
+.thank p{
+  font-size: 18px;
+  color: var(--Dark-grayish-violet);
+}
+.thank button{
+  color: var(--White);
+  width: 100%;
+  border-radius: 6px;
+  padding: 1rem;
+  font-size: 18px;
+  background-color: var(--Very-dark-violet);
+  cursor: pointer;
+}
+@media (max-width:1200px){
+  .cartao{
+    transform: translate(-40%, -50%);
+  }
+  .cartao-container img{
+    width: 300px;
+  }
+  .cartao-frente{
+    width: 300px;
+  }
+  .verso-cartao{
+    width: 300px;
+  }
+  .verso-cartao img{
+    width: 300px;
+  }
+  .logo{
+    width: 50px;
+  }
+  #number{
+    font-size: 1.1rem;
+  }
+  #cvc{
+    top:42%;
+    right: 12%;
+  } 
+}
+@media (max-width:1000px){
+  .container{
+    flex-direction: column;
+  }
+  .cartao-container img{
+    width: 280px;
+  }
+  .cartao-frente{
+    width: 280px;
+    z-index: 100;
+  }
+  .verso-cartao{
+    width: 280px;
+    transform: translateY(70px);
+  }
+  .verso-cartao img{
+    width: 280px;
+  }
+  .esquerda{
+    width: 100%;
+    min-height: 30vh;
+    background-image: url(/images/bg-main-mobile.png);
+  }
+  .cartao{
+    flex-direction:column-reverse;
+    left: 61%;
+    top: 50%;
+    gap: 0;
+  }
+  .direita{
+    margin-top: 6rem;
+  }
+}
+@media (max-width:500px) {
+  .cartao{
+    flex-direction:column-reverse;
+    left: 55%;
+    top: 40%;
+    gap: 0;
+  }
+  .verso-cartao img, .verso-cartao{
+    width: 260px;
+  
+}
+}
+@media (max-width:400px) {
+  .logo {
+    max-width:30px;
+    height: 20px;
+    top:4px;
+    left:4px
+
+  }
+  .cartao{
+    flex-direction:column-reverse;
+    left: 55%;
+    top: 40%;
+    gap: 0;
+  }
+  #cartao-data div input{
+   max-width: 10px;
+    margin-inline: .1rem;
+    top: 30px;}
+
+  .cartao-frente, .cartao-frente img, .verso-cartao img, .verso-cartao{
+    width: 200px;
+}
+.informacoes{
+  font-size: 12px;
+  justify-content: space-between;
+  margin-right: -25px;
+}
+#number{
+  font-size: .7rem;
+  top: 45px;
+}
+#cvc{
+  top: 44px;
+}
+
+}
+

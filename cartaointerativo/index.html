@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <!-- Lado esquerdo -->
+      <div class="esquerda">
+        <div class="cartao">
+          <div class="cartao-frente">
+            <img class="logo" src="/images/card-logo.svg" alt="logo">
+            <!-- frente Cartão -->
+            <div class="cartao-container">
+              <img src="/images/bg-card-front.png" alt="cartao frente">
+              <h1 id="number">0000 0000 0000 0000</h1>
+              <div class="informacoes">
+                <span id="name">Jane Appleseed</span>
+                <span id="date">
+                  <span id="mes">00</span>
+                  /
+                  <span id="ano">00</span>
+                </span>
+              </div>
+            </div>
+          </div>
+          <!-- verso Cartão -->
+          <div class="verso-cartao">
+            <img src="/images/bg-card-back.png" alt="fundo cartao">
+            <span id="cvc">000</span>
+          </div>
+        </div>
+      </div>
+      <!-- Lado Direito -->
+      <div class="direita">
+        <form>
+          <div class="grid1">
+            <label for="nome-usuario">Cardholder Name</label>
+            <input type="text" placeholder="e.g. Jane Appleseed" id="nome-usuario" required>
+          </div>
+          <div class="grid2">
+            <label for="numero-cartao">Card Number</label>
+            <input type="number"
+              pattern="\d*"
+              min="16" max="16" placeholder="1234 5678 9123 0000" id="numero-cartao" required>
+          </div>
+          <div class="informacao-cartao">
+            <div id="cartao-data">
+             <label for="data">Exp. Date (MM/YY)</label>
+              <div class="dois-inputs">
+                <input type="number" placeholder="MM"
+                oninput="if (this.value.lenght > this.min) this.value = this.value.slice(0, this.max);"
+                min="2" max="2" id="cartao-mes" required>
+                <input type="number" placeholder="YY"
+                oninput="if (this.value.lenght > this.min) this.value = this.value.slice(0, this.max);"
+                min="2" max="2" id="cartao-ano" required>
+              </div>
+            </div>
+            <div class="grid4">
+              <label for="cvc-sec">CVC</label>
+              <input type="number"
+                oninput="if (this.value.lenght > this.min) this.value = this.value.slice(0, this.max);"
+                min="3" max="3" placeholder="e.g. 123" id="cvc-sec" required>
+            </div>
+          </div>
+          <button type="submit" id="btn-sub"> Confirm</button>
+        </form>
+        <div class="thank hidden">
+          <img src="/images/icon-complete.svg" alt="completo">
+          <h1>Thanks you!</h1>
+          <p>We've added your card details</p>
+          <button>Continue</button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+  <script src="https://unpkg.com/imask"></script>
+  <script src="app.js"></script>
+</body>
+
+</html>
