@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color:#F5DCD1;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+.relogio{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.display{
+    background-color: #dcc6bc;
+    width:400px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    border-radius: 20px;
+    color: #854442;
+    font-size: 7rem;
+    border: 4px solid #3c2f2f;
+}
+footer {
+    font-size: 2rem;
+    margin-top: 10px;
+    color: #4b3832;
+}
