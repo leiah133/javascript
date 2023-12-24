@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color:#c7bbc9  ;
+    font-family: sans-serif;
+
+}
+main{
+    border: 1px solid #000;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+img{
+    width:200px;
+    height:200px;
+    border-radius: 50%;
+    border: 3px solid 		#5e3c58;
+}
+.descricao{
+    width: 200px;
+    padding: 5px 0px;
+}
+.descricao h2{
+    
+    color: #2e4045;
+}
+.descricao i{
+    font-size: 14px;
+}
+.duracao{
+    width: 200px;
+}
+.barra{
+    width: 200px;
+    height: 6px;
+    border: 1px solid #5e3c58;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    
+}
+progress{
+    
+    height: 6px;
+    width: 6%;
+}
+.ponto{
+    width: 17px;
+    height: 17px;
+    background-color: #2e4045;
+    border-radius: 50%;
+    margin-left: -2px;
+    
+}
+.tempo{
+    margin-top: 5px;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+}
